@@ -25,8 +25,6 @@
 
 </font>
 
---- 
-
 ## Quick start: 
 
 
@@ -38,6 +36,15 @@ The following section of the document is a guide to install and clone this proje
 git clone --recursive https://github.com/wi-feye/wi-feye.git
 ```
 --- 
+
+### Update the repository with all submodules
+```
+git submodule update --remote
+git add --all
+git commit -m "message"
+git push
+```
+---
 
 ## Bibliography and references 
 
