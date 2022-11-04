@@ -1,0 +1,15 @@
+[submodule "artificial-intelligence"]
+	path = artificial-intelligence
+	url = https://github.com/wi-feye/artificial-intelligence.git
+[submodule "data-manager"]
+	path = data-manager
+	url = https://github.com/wi-feye/data-manager.git
+[submodule "data-collector"]
+	path = data-collector
+	url = https://github.com/wi-feye/data-collector.git
+[submodule "gateway"]
+	path = gateway
+	url = https://github.com/wi-feye/gateway.git
+[submodule "user-manager"]
+	path = user-manager
+	url = https://github.com/wi-feye/user-manager.git

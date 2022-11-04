@@ -33,11 +33,10 @@
 The following section of the document is a guide to install and clone this project.
 
 
-### Build this repository 
-First, make sure you have all the required libraries installed. Then, clone this git repository:
-
-    git clone https://github.com/wi-feye/wi-feye.git
-
+### Build this repository
+```
+git clone --recursive https://github.com/wi-feye/wi-feye.git
+```
 --- 
 
 ## Bibliography and references 
