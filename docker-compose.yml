@@ -1,0 +1,161 @@
+#
+# University of Pisa - Smart Application - 2022-2023
+# Main docker-compose File
+# Project: 4
+
+version: '3.8'
+
+services:
+  
+  redis:
+    image: "redis:alpine"
+    command: --port 6379
+    ports:
+      - "6379:6379"
+
+  # -------------------------------------------- #
+  # Starting with API  Gateway                   #
+  # -------------------------------------------- #
+
+  api_gateway:
+    #
+    # API Gateway
+    #
+    # ! ! ! WARNING ! ! !
+    # DO NOT set the container_name attribute and ports mapping
+    # to allow the replication.
+    #
+    restart: always
+    build: ./gateway
+    volumes:
+      - ./gateway/mib/static:/static
+      - ./mmiagateway:/app
+    env_file:
+      - gateway.conf
+    environment:
+      - USERS_MS_HOST=users_ms_worker
+      - NOTIFICATIONS_MS_HOST=notifications_ms_worker
+      - LOTTERY_MS_HOST=lottery_ms_worker
+      - MESSAGES_MS_HOST=messages_ms_worker
+    # - FLASK_ENV=development
+    labels:
+      - mib.api_gateway_worker
+
+
+  # -------------------------------------------- #
+  # Users Microservice                           #
+  # -------------------------------------------- #
+  users_db:
+    image: postgres:13
+    restart: unless-stopped
+        # ports:
+        #   # this is only for development purpose
+        #   - "5342:5342"
+    env_file:
+      - users_ms.conf
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U $$POSTGRES_USER" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  users_ms_worker:
+    #
+    # Users Microservice Worker node
+    #
+    build: ./user-manager
+    restart: on-failure
+    volumes:
+      - ./user-manager/mib/static:/static
+      - ./user-manager:/app
+    env_file:
+      - users_ms.conf
+    environment:
+      - REDIS_HOST=redis
+      - POSTGRES_HOST=users_db
+    # - FLASK_ENV=development
+    depends_on:
+        users_db:
+          condition: service_healthy
+    
+  # -------------------------------------------- #
+  # Data Manager Microservice                    #
+  # -------------------------------------------- #
+
+  data_db:
+    image: postgres:13
+    restart: unless-stopped
+  # ports:
+  #   # this is only for development purpose
+  #   - "5343:5343"
+    env_file:
+      - data_ms.conf
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U $$POSTGRES_USER" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  data_ms_worker:
+    #
+    # Notification Microservice Worker node
+    #
+    build: ./data-manager
+    restart: on-failure
+    volumes:
+      - ./data-manager:/app
+    env_file:
+      - data_manager_ms.conf
+    environment:
+      - POSTGRES_HOST=data_db
+    # - POSTGRES_PORT=5343
+    #  - USERS_MS_HOST=users_ms_worker
+    # - FLASK_ENV=development
+    depends_on:
+      data-manager_db:
+        condition: service_healthy
+            
+# -------------------------------------------- #
+# Artificial Intelligence Microservice         #
+# -------------------------------------------- #
+  ai_ms_worker:
+     #
+     # Users Microservice Worker node
+     #
+    build: ./artificial-intelligence
+    restart: on-failure
+    volumes:
+      - ./artifical-intelligence:/app 
+    env_file:
+      - artificial_intelligence_ms.conf
+    # - FLASK_ENV=development
+    
+  
+
+  # -------------------------------------------- #
+  # Data Collector Microservice                  #
+  # -------------------------------------------- #
+
+  data_collector_ms_worker:
+   #
+   # Users Microservice Worker node
+   #
+   build: ./data-collector
+   restart: on-failure
+   volumes:
+     - ./data-collector:/app
+     - ./data-collector/mib/static:/static
+     - /etc/localtime:/etc/localtime:ro
+   env_file:
+     - data_collector_ms.conf
+
+  
+ 
+
+volumes:
+  # -------------------------------------------- #
+  # Volumes                                      #
+  # -------------------------------------------- #
+
+  static_contents:
+  # API Gateway static content volume
