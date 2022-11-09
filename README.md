@@ -66,7 +66,7 @@ If you have any problems to instal this repository or need any clarification on 
 | Domenico Tapputi      | @studenti.unipi.it            |Frontend   | <a href="https://github.com/">Domenico Tuppati</a>                |
 | Paolo Fasano          | p.fasano1@studenti.unipi.it   |Backend    | <a href="https://github.com/PFasano99/">Paolo Fasano</a>          |
 | Federico Ramacciotti  | f.ramacciotti4@studenti.unipi.it            |Backend    | <a href="https://github.com/0xfederama">Federico Ramacciotti</a>  |
-| Davide Fiorini        | @studenti.unipi.it            |Backend    | <a href="https://github.com/dufnill">Davide Fiorini</a>           |
+| Davide Fiorini        | d.fiorini@studenti.unipi.it   |Backend    | <a href="https://github.com/dufnill">Davide Fiorini</a>           |
 | Paolo Lanza           | p.lanza1@studenti.unipi.it    |Backend    | <a href="https://github.com/paololanza">Paolo Lanza</a>           |
 | Francesco Kotopulos De Angelis |   f.kotopulosdeange@studenti.unipi.it |Backend    | <a href="https://github.com/dookie182">Francesco Kotopulos De Angelis</a> |
 | Domenico Erriquez     | d.erriquez@studenti.unipi.it  |Backend    | <a href="https://github.com/Erriquez97">Domenico Erriquez</a>     |
