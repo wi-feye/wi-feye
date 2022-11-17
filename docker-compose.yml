@@ -2,6 +2,7 @@
 # University of Pisa - Smart Application - 2022-2023
 # Main docker-compose File
 # Project: 4
+#
 
 version: '3.8'
 
@@ -22,7 +23,7 @@ services:
   #   restart: always
   #   build: ./gateway
   #   volumes:
-  #     - ./gateway:/app
+  #     - ./gateway:/var/lib/postgresql/data
   #   env_file:
   #     - gateway.conf
     # environment:
@@ -40,6 +41,8 @@ services:
   user_manager_db:
     image: postgres:13
     restart: unless-stopped
+    volumes:
+      - user_manager_db:/var/lib/postgresql/data
     env_file:
       - users_ms.conf
     healthcheck:
@@ -54,8 +57,7 @@ services:
       - users_ms.conf
     environment:
       - POSTGRES_HOST=user_manager_db
-    restart: on-failure
-    command: sh -c "flask db init && flask db migrate && flask db upgrade"
+    command: flask db upgrade
     depends_on:
       data_manager_db:
         condition: service_healthy
@@ -66,15 +68,12 @@ services:
     #
     build: ./user-manager
     restart: on-failure
-    volumes:
-      - user_manager_db:/var/lib/postgresql/data
     env_file:
       - users_ms.conf
     ports:
       - "10002:10002"
     environment:
       - POSTGRES_HOST=user_manager_db
-    # - FLASK_ENV=development
     depends_on:
         user_manager_db:
           condition: service_healthy
@@ -94,7 +93,6 @@ services:
       - data_manager_db:/var/lib/postgresql/data
     healthcheck:
       test: [ "CMD", "pg_isready", "-U", "db", "-d", "data_manager_db" ]
-     # test: [ "CMD-SHELL", "pg_isready -U db -d data_manager_db" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -102,12 +100,11 @@ services:
   
   data_manager_ms_migrations:
     build: ./data-manager
-    env_file:
+    env_file: 
       - data_manager_ms.conf
     environment:
       - POSTGRES_HOST=data_manager_db
-    restart: on-failure
-    command: sh -c "flask db init && flask db migrate && flask db upgrade"
+    command: flask db upgrade
     depends_on:
       data_manager_db:
         condition: service_healthy
@@ -118,8 +115,6 @@ services:
     #
     build: ./data-manager
     restart: on-failure
-    volumes:
-      - ./data-manager:/app
     ports:
       - "10001:10001"
     env_file:
@@ -138,26 +133,23 @@ services:
   ai_ms_worker:
     build: ./artificial-intelligence
     restart: on-failure
-    volumes:
-      - ./artificial-intelligence:/app
     env_file:
       - artificial_intelligence_ms.conf
-      #- FLASK_ENV=development
 
   # -------------------------------------------- #
   # Data Collector Microservice                  #
   # -------------------------------------------- #
 
-  data_collector_ms_worker:
-    #
-    # Data Collector Microservice Worker node
-    #
-    build: ./data-collector
-    restart: on-failure
-    volumes:
-      - ./data-collector:/app
-    env_file:
-      - data_collector_ms.conf
+  # data_collector_ms_worker:
+  #   #
+  #   # Data Collector Microservice Worker node
+  #   #
+  #   build: ./data-collector
+  #   restart: on-failure
+  #   volumes:
+  #     - ./data-collector:/var/lib/postgresql/data
+  #   env_file:
+  #     - data_collector_ms.conf
 
 volumes:
   data_manager_db:
