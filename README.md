@@ -5,19 +5,19 @@
 </p>
 <p align = center>
     <font size = 2>  
-        <br> <a href="https://github.com/PFasano99/">Paolo Fasano</a>, 
-             <a href="https://github.com/xiaoli98">Malio Li</a>, 
-             <a href="https://github.com/0xfederama">Federico Ramacciotti</a> 
-             <a href="https://github.com/GeremiaPompei">Geremia Pompei</a>,
-        <br> <a href="https://github.com/">Giuseppe Lombardi</a>, 
-             <a href="https://github.com/Sopralapanca">Giacomo Carfì</a>, 
-             <a href="https://github.com/domferr">Domenico Ferraro</a>,
-             <a href="https://github.com/jacons">Andrea Iommi</a>,
-        <br> <a href="https://github.com/dufnill">Davide Fiorini</a>,
-             <a href="https://github.com/paololanza">Paolo Lanza</a>,
-             <a href="https://github.com/dookie182">Francesco Kotopulos De Angelis</a>,
-             <a href="https://github.com/Erriquez97">Domenico Erriquez</a>,
-        <br> <a href="https://github.com/">Domenico Tuppati</a>      
+        <a href="https://github.com/PFasano99/">Paolo Fasano</a>, 
+		<a href="https://github.com/xiaoli98">Malio Li</a>, 
+		<a href="https://github.com/0xfederama">Federico Ramacciotti</a>, 
+		<a href="https://github.com/GeremiaPompei">Geremia Pompei</a>,
+		<a href="https://github.com/">Giuseppe Lombardi</a>, 
+		<a href="https://github.com/Sopralapanca">Giacomo Carfì</a>, 
+		<a href="https://github.com/domferr">Domenico Ferraro</a>,
+		<a href="https://github.com/jacons">Andrea Iommi</a>,
+		<a href="https://github.com/dufnill">Davide Fiorini</a>,
+		<a href="https://github.com/paololanza">Paolo Lanza</a>,
+		<a href="https://github.com/dookie182">Francesco Kotopulos De Angelis</a>,
+		<a href="https://github.com/Erriquez97">Domenico Erriquez</a>,
+		<a href="https://github.com/">Domenico Tupputi</a>      
     </font>
 </p>
 
@@ -57,13 +57,13 @@ If you have any problems to instal this repository or need any clarification on 
 
 |Author                 |University Mail                |Role       |Github                                                             |
 |-----------------------|-------------------------------|-----------|-------------------------------------------------------------------|
-| Malio Li              | m.li6@studenti.unipi.it       |AI & Data  | <a href="https://github.com/xiaoli98">Malio Li</a>                |
-| Giuseppe Lombardi     | @studenti.unipi.it            |AI & Data  | <a href="https://github.com/">Giuseppe Lombardi</a>               |   
-| Giacomo Carfì         | @studenti.unipi.it            |AI & Data  | <a href="https://github.com/Sopralapanca">Giacomo Carfì</a>       |
-| Andrea Iommi          | @studenti.unipi.it            |AI & Data  | <a href="https://github.com/jacons">Andrea Iommi</a>              |
-| Domenico Ferraro      | @studenti.unipi.it            |Frontend   | <a href="https://github.com/domferr">Domenico Ferraro</a>         |
-| Geremia Pompei        | g.pompei2@studenti.unipi.it   |Frontend   | <a href="https://github.com/GeremiaPompei">Geremia Pompei</a>     |
-| Domenico Tapputi      | @studenti.unipi.it            |Frontend   | <a href="https://github.com/">Domenico Tuppati</a>                |
+| Malio Li              | m.li6@studenti.unipi.it       |AI  | <a href="https://github.com/xiaoli98">Malio Li</a>                |
+| Giuseppe Lombardi     | @studenti.unipi.it            |AI  | <a href="https://github.com/">Giuseppe Lombardi</a>               |   
+| Giacomo Carfì         | @studenti.unipi.it            |AI  | <a href="https://github.com/Sopralapanca">Giacomo Carfì</a>       |
+| Andrea Iommi          | @studenti.unipi.it            |AI  | <a href="https://github.com/jacons">Andrea Iommi</a>              |
+| Domenico Ferraro      | @studenti.unipi.it            |Frontend & IoT  | <a href="https://github.com/domferr">Domenico Ferraro</a>         |
+| Geremia Pompei        | g.pompei2@studenti.unipi.it   |Frontend & IoT   | <a href="https://github.com/GeremiaPompei">Geremia Pompei</a>     |
+| Domenico Tupputi      | @studenti.unipi.it            |Frontend & IoT  | <a href="https://github.com/">Domenico Tupputi</a>                |
 | Paolo Fasano          | p.fasano1@studenti.unipi.it   |Backend    | <a href="https://github.com/PFasano99/">Paolo Fasano</a>          |
 | Federico Ramacciotti  | f.ramacciotti4@studenti.unipi.it            |Backend    | <a href="https://github.com/0xfederama">Federico Ramacciotti</a>  |
 | Davide Fiorini        | d.fiorini@studenti.unipi.it   |Backend    | <a href="https://github.com/dufnill">Davide Fiorini</a>           |
