@@ -55,7 +55,7 @@ services:
     environment:
       - POSTGRES_HOST=user_manager_db
     restart: on-failure
-    command: flask db init && flask db migrate && flask db upgrade
+    command: sh -c "flask db init && flask db migrate && flask db upgrade"
     depends_on:
       data_manager_db:
         condition: service_healthy
@@ -107,7 +107,7 @@ services:
     environment:
       - POSTGRES_HOST=data_manager_db
     restart: on-failure
-    command: flask db init && flask db migrate && flask db upgrade
+    command: sh -c "flask db init && flask db migrate && flask db upgrade"
     depends_on:
       data_manager_db:
         condition: service_healthy
@@ -139,7 +139,7 @@ services:
     build: ./artificial-intelligence
     restart: on-failure
     volumes:
-      - ./artifical-intelligence:/app
+      - ./artificial-intelligence:/app
     env_file:
       - artificial_intelligence_ms.conf
       #- FLASK_ENV=development
