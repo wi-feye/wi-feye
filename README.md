@@ -61,7 +61,7 @@ If you have any problems to instal this repository or need any clarification on 
 | Giuseppe Lombardi     | @studenti.unipi.it            |AI  | <a href="https://github.com/">Giuseppe Lombardi</a>               |   
 | Giacomo Carfì         | @studenti.unipi.it            |AI  | <a href="https://github.com/Sopralapanca">Giacomo Carfì</a>       |
 | Andrea Iommi          | @studenti.unipi.it            |AI  | <a href="https://github.com/jacons">Andrea Iommi</a>              |
-| Domenico Ferraro      | @studenti.unipi.it            |Frontend & IoT  | <a href="https://github.com/domferr">Domenico Ferraro</a>         |
+| Domenico Ferraro      | d.ferraro7@studenti.unipi.it            |Frontend & Backend  | <a href="https://github.com/domferr">Domenico Ferraro</a>         |
 | Geremia Pompei        | g.pompei2@studenti.unipi.it   |Frontend & IoT   | <a href="https://github.com/GeremiaPompei">Geremia Pompei</a>     |
 | Domenico Tupputi      | @studenti.unipi.it            |Frontend & IoT  | <a href="https://github.com/">Domenico Tupputi</a>                |
 | Paolo Fasano          | p.fasano1@studenti.unipi.it   |Backend    | <a href="https://github.com/PFasano99/">Paolo Fasano</a>          |
