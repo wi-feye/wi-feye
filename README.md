@@ -63,7 +63,7 @@ If you have any problems to instal this repository or need any clarification on 
 | Andrea Iommi          | a.iommi2@studenti.unipi.it    |AI  | <a href="https://github.com/jacons">Andrea Iommi</a>              |
 | Domenico Ferraro      | d.ferraro7@studenti.unipi.it            |Frontend & Backend  | <a href="https://github.com/domferr">Domenico Ferraro</a>         |
 | Geremia Pompei        | g.pompei2@studenti.unipi.it   |Frontend & IoT   | <a href="https://github.com/GeremiaPompei">Geremia Pompei</a>     |
-| Domenico Tupputi      | @studenti.unipi.it            |Frontend & IoT  | <a href="https://github.com/">Domenico Tupputi</a>                |
+| Domenico Tupputi      | d.tupputi@studenti.unipi.it   |Frontend & IoT   | <a href="https://github.com/Dome00">Domenico Tupputi</a>	|
 | Paolo Fasano          | p.fasano1@studenti.unipi.it   |Backend    | <a href="https://github.com/PFasano99/">Paolo Fasano</a>          |
 | Federico Ramacciotti  | f.ramacciotti4@studenti.unipi.it            |Backend    | <a href="https://github.com/0xfederama">Federico Ramacciotti</a>  |
 | Davide Fiorini        | d.fiorini@studenti.unipi.it   |Backend    | <a href="https://github.com/dufnill">Davide Fiorini</a>           |
