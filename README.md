@@ -44,6 +44,9 @@ git add --all
 git commit -m "message"
 git push
 ```
+
+### Build docker
+docker-compose up --build
 ---
 
 ## Bibliography and references 
@@ -58,12 +61,12 @@ If you have any problems to instal this repository or need any clarification on 
 |Author                 |University Mail                |Role       |Github                                                             |
 |-----------------------|-------------------------------|-----------|-------------------------------------------------------------------|
 | Malio Li              | m.li6@studenti.unipi.it       |AI  | <a href="https://github.com/xiaoli98">Malio Li</a>                |
-| Giuseppe Lombardi     | @studenti.unipi.it            |AI  | <a href="https://github.com/">Giuseppe Lombardi</a>               |   
-| Giacomo Carfì         | @studenti.unipi.it            |AI  | <a href="https://github.com/Sopralapanca">Giacomo Carfì</a>       |
-| Andrea Iommi          | @studenti.unipi.it            |AI  | <a href="https://github.com/jacons">Andrea Iommi</a>              |
+| Giuseppe Lombardi     |g.lombardi11@studenti.unipi.it            |AI  | <a href="https://github.com/">Giuseppe Lombardi</a>               |   
+| Giacomo Carfì         | g.carfi1@studenti.unipi.it            |AI  | <a href="https://github.com/Sopralapanca">Giacomo Carfì</a>       |
+| Andrea Iommi          | a.iommi2@studenti.unipi.it            |AI  | <a href="https://github.com/jacons">Andrea Iommi</a>              |
 | Domenico Ferraro      | d.ferraro7@studenti.unipi.it            |Frontend & Backend  | <a href="https://github.com/domferr">Domenico Ferraro</a>         |
 | Geremia Pompei        | g.pompei2@studenti.unipi.it   |Frontend & IoT   | <a href="https://github.com/GeremiaPompei">Geremia Pompei</a>     |
-| Domenico Tupputi      | @studenti.unipi.it            |Frontend & IoT  | <a href="https://github.com/">Domenico Tupputi</a>                |
+| Domenico Tupputi      | d.tupputi1@studenti.unipi.it            |Frontend & IoT  | <a href="https://github.com/">Domenico Tupputi</a>                |
 | Paolo Fasano          | p.fasano1@studenti.unipi.it   |Backend    | <a href="https://github.com/PFasano99/">Paolo Fasano</a>          |
 | Federico Ramacciotti  | f.ramacciotti4@studenti.unipi.it            |Backend    | <a href="https://github.com/0xfederama">Federico Ramacciotti</a>  |
 | Davide Fiorini        | d.fiorini@studenti.unipi.it   |Backend    | <a href="https://github.com/dufnill">Davide Fiorini</a>           |
