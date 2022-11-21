@@ -55,7 +55,7 @@ git push
 3. Install requirements
 		pip3 install -r requiremnts.txt or pip install -r requiremnts.txt
 4. Build docker
-		docker-compose 
+		docker-compose
 
 ## Bibliography and references 
 
