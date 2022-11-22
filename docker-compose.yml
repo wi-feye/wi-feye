@@ -57,7 +57,7 @@ services:
       - users_ms.conf
     environment:
       - POSTGRES_HOST=user_manager_db
-    command: flask db upgrade
+    command: sh -c "flask db init && flask db migrate && flask db upgrade"
     depends_on:
       data_manager_db:
         condition: service_healthy
@@ -104,7 +104,7 @@ services:
       - data_manager_ms.conf
     environment:
       - POSTGRES_HOST=data_manager_db
-    command: flask db upgrade
+    command: sh -c "flask db init && flask db migrate && flask db upgrade"
     depends_on:
       data_manager_db:
         condition: service_healthy
