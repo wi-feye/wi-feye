@@ -47,9 +47,6 @@ git push
 
 ### Run the app
 ```
-cd gateway
-npm i
-cd ..
 docker-compose up --build
 ```
 ---
