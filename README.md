@@ -45,20 +45,17 @@ git commit -m "message"
 git push
 ```
 
-### Build docker
+### Run the app
+```
+cd gateway
+npm i
+cd ..
 docker-compose up --build
+```
 ---
 
 ### Steps to build:
-0. Cd to data-manager
-1. Create the virtual environment (if you haven't already)
-		virtualenv venv
-2. Start the virtual environment
-		source venv/bin/active
-3. Install requirements
-		pip3 install -r requiremnts.txt or pip install -r requiremnts.txt
-4. Build docker
-		docker-compose
+
 
 ## Bibliography and references 
 
