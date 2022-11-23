@@ -24,6 +24,8 @@ services:
     build: ./gateway
     # volumes:
     #   - ./gateway:/var/lib/postgresql/data
+    expose:
+      - "10004"
     env_file:
       - gateway.conf
     ports:
@@ -31,9 +33,8 @@ services:
     environment:
       - USERS_MS_HOST=users_ms_worker
       - DATA_MANAGER_MS_HOST=data_manager_ms_worker
-      - DATA_COLLECTOR_MS_HOST=_ms_worker
+      - DATA_COLLECTOR_MS_HOST=data_collector_ms_worker
       - AI_MS_HOST=messages_ms_worker
-
 
   # -------------------------------------------- #
   # Users Microservice                           #
@@ -66,10 +67,13 @@ services:
     #
     # Users Microservice Worker node
     #
+    container_name: user_manager
     build: ./user-manager
     restart: on-failure
     env_file:
       - users_ms.conf
+    expose:
+      - "10002"
     ports:
       - "10002:10002"
     environment:
@@ -79,7 +83,7 @@ services:
           condition: service_healthy
         user_manager_ms_migrations:
           condition: service_started
-    
+
   # -------------------------------------------- #
   # Data Manager Microservice                    #
   # -------------------------------------------- #
@@ -113,8 +117,11 @@ services:
     #
     # Data Manager Microservice Worker node
     #
+    container_name: data_manager
     build: ./data-manager
     restart: on-failure
+    expose:
+      - "10001"
     ports:
       - "10001:10001"
     env_file:
@@ -126,35 +133,46 @@ services:
         condition: service_healthy  
       data_manager_ms_migrations:
         condition: service_started
-            
+
   # -------------------------------------------- #
   # Artificial Intelligence Microservice         #
   # -------------------------------------------- #
   ai_ms_worker:
     build: ./artificial-intelligence
     restart: on-failure
+
     env_file:
       - artificial_intelligence_ms.conf
+
+    depends_on:
+      data_ms_worker:
+        condition: service_started
 
   # -------------------------------------------- #
   # Data Collector Microservice                  #
   # -------------------------------------------- #
 
-  # data_collector_ms_worker:
-  #   #
-  #   # Data Collector Microservice Worker node
-  #   #
-  #   build: ./data-collector
-  #   restart: on-failure
-  #   volumes:
-  #     - ./data-collector:/var/lib/postgresql/data
-  #   env_file:
-  #     - data_collector_ms.conf
+  data_collector_ms_worker:
+     #
+     # Data Collector Microservice Worker node
+     #
+     build: ./data-collector
+     restart: on-failure
+     volumes:
+       - ./data-collector:/var/lib/postgresql/data
+     env_file:
+       - data_collector_ms.conf
+     expose:
+       - "10005"
+     ports:
+       - "10005:10005"
+     depends_on:
+       user_ms_worker:
+         condition: service_started
 
 volumes:
   data_manager_db:
   user_manager_db:
-
 
 #   static_contents:
 #   # API Gateway static content volume
