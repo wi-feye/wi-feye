@@ -31,7 +31,7 @@
 The following section of the document is a guide to install and clone this project.
 
 
-### Build this repository
+### Download this repository
 ```
 git clone --recursive https://github.com/wi-feye/wi-feye.git
 ```
@@ -52,14 +52,6 @@ npm i
 cd ..
 docker-compose up --build
 ```
----
-
-### Steps to build:
-
-
-## Bibliography and references 
-
-
 ---
 
 ## Contact information
