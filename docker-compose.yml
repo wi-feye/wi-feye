@@ -143,6 +143,10 @@ services:
 
     env_file:
       - artificial_intelligence_ms.conf
+    expose:
+      - "10003"
+    ports:
+      - "10003:10003"
 
     depends_on:
       data_ms_worker:
