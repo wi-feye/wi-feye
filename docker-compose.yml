@@ -138,6 +138,7 @@ services:
   # Artificial Intelligence Microservice         #
   # -------------------------------------------- #
   ai_ms_worker:
+    container_name: ai_server
     build: ./artificial-intelligence
     restart: on-failure
 
