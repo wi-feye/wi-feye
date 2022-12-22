@@ -13,3 +13,6 @@
 [submodule "user-manager"]
 	path = user-manager
 	url = https://github.com/wi-feye/user-manager.git
+[submodule "telegram"]
+	path = telegram
+	url = https://github.com/wi-feye/telegram

@@ -173,6 +173,24 @@ services:
      depends_on:
        user_ms_worker:
          condition: service_started
+         
+  # -------------------------------------------- #
+  # Telegram Microservice                        #
+  # -------------------------------------------- #
+  telegram_ms_worker:
+    build: ./telegram
+    restart: on-failure
+
+    env_file:
+      - telegram_ms.conf
+    expose:
+      - "10006"
+    ports:
+      - "10006:10006"
+
+    depends_on:
+      data_ms_worker:
+        condition: service_started
 
 volumes:
   data_manager_db:
