@@ -193,6 +193,21 @@ services:
       data_ms_worker:
         condition: service_started
 
+  # -------------------------------------------- #
+  # Device Interoperability Microservice         #
+  # -------------------------------------------- #
+  device_interoperability_ms_worker:
+    container_name: device_interoperability_server
+    build: ./device_interoperability
+    restart: on-failure
+
+    env_file:
+      - device_interoperability_ms.conf
+    expose:
+      - "10007"
+    ports:
+      - "10007:10007"
+
 volumes:
   data_manager_db:
   user_manager_db:

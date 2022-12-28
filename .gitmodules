@@ -16,3 +16,6 @@
 [submodule "telegram"]
 	path = telegram
 	url = https://github.com/wi-feye/telegram
+[submodule "device_interoperability"]
+	path = device_interoperability
+	url = https://github.com/wi-feye/device_interoperability.git
