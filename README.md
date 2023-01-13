@@ -25,7 +25,7 @@
 
 </font>
 
-Wi-Feye is a service that uses Wi-Fi probe requests in a building to do a crowd behavior analysis and detect common patterns, points of interest and anomalies inside the building.
+Wi-Feye is a service that uses Wi-Fi probe requests in a building to do crowd behavior analysis and detect common patterns, points of interest and anomalies inside the building.
 
 ## Quick start: 
 
